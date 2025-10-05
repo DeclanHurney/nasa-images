@@ -9,6 +9,7 @@ nasa_api_key = os.getenv('NASA_API_KEY')
 
 print(f"NASA API Key: {nasa_api_key}")
 url=("https://api.nasa.gov/planetary/apod?api_key="+nasa_api_key)
+print(f"URL: {url}")
 
 try:
     response = reqs.get(url).json()
