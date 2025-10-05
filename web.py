@@ -6,10 +6,9 @@ import os
 
 load_dotenv()   #1) Parse a .env file and then load all the variables found as environment variables
 nasa_api_key = os.getenv('NASA_API_KEY')
+print("If you want NASA API Key, talk to Declan Hurney")
 
-print(f"NASA API Key: {nasa_api_key}")
 url=("https://api.nasa.gov/planetary/apod?api_key="+nasa_api_key)
-print(f"URL: {url}")
 
 try:
     response = reqs.get(url).json()
